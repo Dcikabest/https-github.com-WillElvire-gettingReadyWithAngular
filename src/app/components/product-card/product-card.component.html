@@ -1,0 +1,19 @@
+<div *ngIf="productInfo">
+  <div class="shop-item">
+    <div class="shop-item-img">
+      <span class="shop-item-sale" *ngIf="productInfo.type=='sale'">Sale</span>
+      <img [src]="productInfo.image"   alt="">
+      <div class="shop-item-meta">
+        <a href="#"><i class="far fa-heart"></i></a>
+        <a href="#"><i class="far fa-shopping-cart"></i></a>
+      </div>
+    </div>
+    <div class="shop-item-info">
+      <div class="shop-item-qty">{{ productInfo.quantity }} en stock</div>
+      <a href="#">
+        <h4 class="shop-item-title">{{ productInfo.title }}</h4>
+      </a>
+      <div class="shop-item-price"><del>{{ productInfo.normalPrice }}$</del> {{ productInfo.reductionPrice }}$</div>
+    </div>
+  </div>
+</div>
